@@ -14,13 +14,16 @@ class Solution {
         
         int n = hs.size();
         int [] ans = new int [n];
-        Iterator<Integer> it = hs.iterator();
-        while(it.hasNext()){
-            int x = it.next();
-            if(hm.contains(x)){
-                ans[k++]=x;
-            }
+        for(Integer ele : hs){
+            ans[k++] = ele;
         }
+        // Iterator<Integer> it = hs.iterator();
+        // while(it.hasNext()){
+            // int x = it.next();
+            // if(hm.contains(x)){
+                // ans[k++]=x;/
+            // }
+        // }
         return ans;
     }
 }
