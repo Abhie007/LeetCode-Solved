@@ -15,6 +15,6 @@ else{
 high=mid-1;
 }
 }
-return low;
+return high+1;
 }
 }
