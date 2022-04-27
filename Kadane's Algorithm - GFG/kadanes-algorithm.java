@@ -36,25 +36,19 @@ class Solution{
     long maxSubarraySum(int arr[], int n){
         
         // Your code here
-       long currsum = arr[0];
-        long realsum = arr[0];
-        
+        long sum = arr[0];
+        long maxsum = arr[0];
         for(int i=1; i<n; i++){
-            
-           
+            if(sum>=0){
+                sum += arr[i];
+            } else {
+                sum = arr[i];            
                 
-        if(currsum <0) {
-                currsum = arr[i];
-            } else{
-                currsum += arr[i];
             }
-            
-            if(currsum > realsum){
-                realsum = currsum;
-            }
+            maxsum = Math.max(sum, maxsum);
         }
-        return realsum;
+        
+        return maxsum;     
     }
-    
 }
 
