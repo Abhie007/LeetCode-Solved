@@ -39,10 +39,10 @@ class Solution{
         long sum = arr[0];
         long maxsum = arr[0];
         for(int i=1; i<n; i++){
-            if(sum>=0){
-                sum += arr[i];
+            if(sum<0){
+                sum = arr[i];
             } else {
-                sum = arr[i];            
+                sum += arr[i];            
                 
             }
             maxsum = Math.max(sum, maxsum);
