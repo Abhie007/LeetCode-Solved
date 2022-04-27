@@ -41,10 +41,12 @@ class Solution{
         
         for(int i=1; i<n; i++){
             
-            if(currsum>=0){
-                currsum += arr[i];
-            } else {
+           
+                
+        if(currsum <0) {
                 currsum = arr[i];
+            } else{
+                currsum += arr[i];
             }
             
             if(currsum > realsum){
