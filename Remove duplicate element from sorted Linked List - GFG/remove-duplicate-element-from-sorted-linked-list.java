@@ -85,7 +85,7 @@ class GfG
 	    curr = curr.next;
 	
 	   }}
-	   return mover;
+	   return head;
 	   
     }
 }
